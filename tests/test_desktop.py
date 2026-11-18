@@ -50,6 +50,7 @@ class DesktopTests(unittest.TestCase):
     def test_profile_form_and_sequence_picker(self):
         from PySide6 import QtCore
         from cinesync.app.main import Window
+        from cinesync.pipeline.mocap import inspect_fbx
         from tests.manual.self_test import make_xml
         with tempfile.TemporaryDirectory() as tmp:
             app_settings = QtCore.QSettings(str(Path(tmp) / 'settings.ini'),
@@ -108,15 +109,15 @@ class DesktopTests(unittest.TestCase):
                     fbx = Path(tmp) / 'capture.fbx'
                     fbx.write_bytes(b'FBX fixture')
                     window.fbx.setText(str(fbx))
-                    details = {
-                        'file': str(fbx), 'size': fbx.stat().st_size,
-                        'mtime_ns': fbx.stat().st_mtime_ns,
+                    worker_result = {
                         'takes': [{'take_index': 1, 'take_name': 'Take 001',
                                    'native_fps': 120, 'first_frame': 0, 'last_frame': 1199,
                                    'timecode': {'version': 1, 'value': '15:14:20:00',
                                                 'fps': 30, 'local_frame': 0,
                                                 'origin': 'fbx:cinesync-v1:root'}}],
                     }
+                    with patch('cinesync.pipeline.mocap.invoke', return_value=worker_result):
+                        details = inspect_fbx(str(fbx), '', Path(tmp))
                     window.fbx_read(details)
                     self.assertEqual(window.collect_mocap()['native_fps'], 120)
                     window.package_signature = window.signature()
