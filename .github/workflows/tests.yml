@@ -2,7 +2,8 @@ name: Python tests
 on: [push, pull_request]
 jobs:
   unit:
-    runs-on: ubuntu-latest
+    # Pin an image with published Python 3.9 x64 builds in setup-python.
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         python: ['3.9', '3.11', '3.12']
