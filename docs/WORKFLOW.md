@@ -50,7 +50,7 @@ Add the repository root to Maya's Python path and run in the Python Script Edito
 
 ```python
 import sys
-sys.path.insert(0, r"/path/to/CutScenePipelineTool")
+sys.path.insert(0, r"/path/to/Cinesync")
 from cinesync.adapters.maya.launcher import show_launcher
 show_launcher()
 ```

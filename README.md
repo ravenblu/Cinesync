@@ -60,7 +60,7 @@ In Maya's Python Script Editor:
 
 ```python
 import sys
-sys.path.insert(0, r"/path/to/CutScenePipelineTool")
+sys.path.insert(0, r"/path/to/Cinesync")
 from cinesync.adapters.maya.launcher import show_launcher
 show_launcher()
 ```
