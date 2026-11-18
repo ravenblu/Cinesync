@@ -1,0 +1,61 @@
+# Python / build outputs
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+# Local test and export outputs (may contain absolute paths and source names)
+/test_runs/
+/packages/
+/local/
+/jobs/
+/profiles/
+/cinesync/config/*.json
+!/cinesync/config/defaults.json
+!/cinesync/config/schema.json
+/session.json
+footage/
+/edit.xml
+/export_config.json
+/recipe.json
+# Local tools, exported packages, and DCC source assets
+/tools
+.cinesync-*/
+/manifest.json
+/RUN_IN_MAYA.py
+*.fbx
+*.ma
+*.mb
+*.mov
+*.mp4
+*.mkv
+*.wav
+*.prproj
+*.uasset
+*.umap
+*.app/
+# Local credentials and signing material
+*.pem
+*.p12
+*.pfx
+*.key
+*.mobileprovision
+# Machine / editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+*.log
+# PyInstaller-generated build description
+/CineSync Bridge.spec

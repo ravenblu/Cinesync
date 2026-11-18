@@ -1,0 +1,12 @@
+{
+  "project": "AAA_Cinematic",
+  "sequence_name": "SEQ01_SC02",
+  "primary_camera": "witness_front",
+  "cameras": {
+    "witness_front": {"track": 1, "label": "Body - Front", "type": "body"},
+    "witness_side": {"track": 2, "label": "Body - Side", "type": "body"},
+    "hmc_face": {"track": 3, "label": "Facial - HMC", "type": "face"}
+  },
+  "audio_track": 1,
+  "shots": [{"shot_id": "SH010", "timeline_in_frame": 0, "timeline_out_frame": 150}]
+}

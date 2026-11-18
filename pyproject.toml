@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cinesync-player"
+version = "0.1.0"
+description = "Multi-camera reference packaging and synchronized playback for Autodesk Maya"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+
+[project.optional-dependencies]
+desktop = ["PySide6>=6.5,<7"]
+build = ["pyinstaller>=6,<7"]
+
+[project.scripts]
+cinesync-bridge = "cinesync.app.main:main"
+cinesync-export = "cinesync.pipeline.export_prep:main"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+namespaces = false
+include = ["cinesync*"]
+exclude = ["tests*", "tools*"]
+
+[tool.setuptools.package-data]
+"cinesync.config" = ["defaults.json", "schema.json"]

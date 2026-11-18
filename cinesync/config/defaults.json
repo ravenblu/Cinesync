@@ -1,0 +1,18 @@
+{
+  "config_version": 1,
+  "project": "Untitled",
+  "sequence_name": "",
+  "primary_camera": "witness_front",
+  "cameras": {
+    "witness_front": {"track": 1, "label": "Body - Front", "type": "body"},
+    "witness_side": {"track": 2, "label": "Body - Side", "type": "body"},
+    "hmc_face": {"track": 3, "label": "Face - HMC", "type": "face"}
+  },
+  "audio_track": 1,
+  "audio_required": false,
+  "shot_detection": {"mode": "primary_track_clips", "shot_id_prefix": "SH"},
+  "export": {"height": 720, "output_directory": "", "ffmpeg": "ffmpeg", "ffprobe": "ffprobe"},
+  "premiere": {"minimum_major_version": 25, "audio_preset": ""},
+  "maya": {"mayapy": ""},
+  "player": {"cache_megabytes": 256, "prefetch_frames": 30}
+}

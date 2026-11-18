@@ -1,0 +1,24 @@
+{
+  "project": "AAA_Cinematic",
+  "sequence_name": "SEQ01_SC02",
+  "fps": 30,
+  "shots": [{
+    "shot_id": "SH010",
+    "timeline_in_frame": 0,
+    "timeline_out_frame": 150,
+    "source_timecode": "15:14:25:00",
+    "audio": {"media": "media/dialog.wav", "source_in_frame": 0},
+    "cameras": {
+      "witness_front": {
+        "label": "Body - Front", "type": "body",
+        "media": "media/front.mov", "source_in_frame": 0,
+        "source_timecode": "15:14:25:00"
+      },
+      "hmc_face": {
+        "label": "Facial - HMC", "type": "face",
+        "media": "media/face.mov", "source_in_frame": 0,
+        "source_timecode": "15:14:25:00"
+      }
+    }
+  }]
+}
