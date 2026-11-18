@@ -15,6 +15,8 @@ Open `CineSync Bridge.app` and complete the one-time Maya setup. Import the
 Premiere XML and motion capture FBX (and audio if required), click **Build**, then **Open in Maya**.
 The [desktop guide](docs/DESKTOP.md) covers setup, FFmpeg and audio options.
 
+![App screenshot](docs/images/app_screenshot.png)
+
 ## Work from source
 
 To build the macOS preview locally, run `scripts/build_macos.command`. The
